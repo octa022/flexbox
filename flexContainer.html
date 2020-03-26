@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox</title>
+  <meta name="description" content="Examples of the use of flexbox.">
+  <meta name="keywords" content="HTML,CSS,FLEXBOX">
+  <meta name="author" content="octa022@gmail.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/container.css">
+
+</head>
+<body>
+  <h1>Uses of Flexbox</h1>
+  <a href="./index.html">Flexbox</a>
+  <h2>Flex Containers</h2>
+  
+  <h3>HTML</h3>
+  <pre>
+
+    &ltdiv class="wrapper"&gt
+      &ltdiv class="flex-container"&gt
+        &ltdiv class="box one"&gt &lt/div&gt
+        &ltdiv class="box two"&gt &lt/div&gt
+        &ltdiv class="box three"&gt &lt/div&gt
+      &lt/div&gt
+    &lt/div&gt
+  </pre>
+
+  <h3>CSS</h3>
+
+  <pre>
+    .wrapper{
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      border: 1px dashed grey;
+    }
+    .flex-container {
+      display: flex;
+      background: #fff;
+    }
+    .box {
+      height: 100px;
+      min-width: 100px;
+    }
+    .one {
+      background: red;
+    }
+    .two {
+      background: blue;
+    }
+    .three {
+      background: green;
+    }
+  </pre>
+
+  <div class="wrapper">
+    <div class="flex-container">
+      <div class="box one"></div>
+      <div class="box two"></div>
+      <div class="box three"></div>
+    </div>
+  </div>
+
+</body>
+</html>

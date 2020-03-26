@@ -1,0 +1,28 @@
+.wrapper{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px dashed grey;
+}
+.flex-container {
+  display: flex;
+  background: #fff;
+}
+/* Flex Grow */
+.box {
+  height: 100px;
+  min-width: 100px;
+  /*flex-grow: 1*/ 
+}
+.one {
+  background: red;
+  flex-grow: 4;
+}
+.two {
+  background: blue;
+  flex-grow: 6;
+}
+.three {
+  background: green;
+  flex-grow: 2;
+}

@@ -13,7 +13,7 @@ body {
   background: #eee;
 }
 section {
-  padding: 0 2rem;
+  padding: 0 10px;
   width: 100%
 }
 pre {
@@ -21,6 +21,7 @@ pre {
   white-space: pre-wrap;
 }
 
+/* Flex Content Styles*/
 .wrapper {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
@@ -49,7 +50,6 @@ pre {
 .three::before {
   content: 'Three'
 }
-
 span[color] {
   color: white;
 }
@@ -62,8 +62,41 @@ span[color="blue"]{
   background-color: green;
 }
 
-@media screen and (max-width: 600px) {
+header {
+  width: 100%;
+  max-width: calc( 100% - 2rem);
+  margin: 0 auto;
+}
+
+/* Menu Base Styles */
+nav {
+  width: 100%;
+  max-width: calc( 100% - 2rem);
+  margin: 0 auto;
+  background-color: #333
+}
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+nav a:hover {
+  background-color: #555
+}
+/* Screen >= 758px */
+@media screen and (min-width: 768px ) {
+  /* Menu Flex Styles */
+  nav {
+    display: flex !important;
+    justify-content: flex-start;
+  }
+  nav a {
+    flex: 1;
+  }
   section {
-    padding: 0 10px
+    padding: 0 2rem;
   }
 }

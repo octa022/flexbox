@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox</title>
+  <meta name="description" content="Examples of the use of flexbox.">
+  <meta name="keywords" content="HTML,CSS,FLEXBOX">
+  <meta name="author" content="octa022@gmail.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  <link rel="stylesheet" type="text/css" href="./basis.css">
+
+</head>
+<body>
+  <section>
+    <h1>Uses of Flexbox</h1>
+    <a href="./../index.html">Flexbox</a>
+    <h2>Flex Basis</h2>
+    
+    <h3>HTML</h3>
+    <pre>
+
+      &ltdiv class="wrapper"&gt
+        &ltdiv class="flex-container"&gt
+          &ltdiv class="box one"&gt &lt/div&gt
+          &ltdiv class="box two"&gt &lt/div&gt
+          &ltdiv class="box three"&gt &lt/div&gt
+        &lt/div&gt
+      &lt/div&gt
+    </pre>
+
+    <h3>CSS</h3>
+
+    <code>
+      .box {min-wind: 300px}
+    </code>
+    <pre>
+
+      .wrapper{
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        border: 1px dashed grey;
+      }
+      .flex-container {
+        display: flex;
+        background: #fff;
+        flex-wrap: wrap;
+      }
+      .box {
+        height: 100px;
+        min-width: 300px;
+      }
+      .one {
+        background: red;
+      }
+      .two {
+        background: blue;
+      }
+      .three {
+        background: green;
+      }
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+      </div>
+    </div>
+
+    <code>
+      .box {flex-basis: 300px}
+    </code>
+    <pre>
+
+      .box {
+        height: 100px;
+        flex-basis: 300px
+      }
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box basis one"></div>
+        <div class="box basis two"></div>
+        <div class="box basis three"></div>
+      </div>
+    </div>
+
+    <code>
+      .box {flex-grow: 1} <br>
+      .one / .two / .three {
+        <br> &nbsp;
+        flex-basis: <span color="red">200px</span> / <span color="blue">300px</span> / <span color="green">400px</span>
+        <br>
+      }
+    </code>
+    <pre>
+
+      .box {
+        height: 100px;
+        flex-grow: 1
+      }
+      .one {
+        background: red;
+        flex-basis: 200px
+      }
+      .two {
+        background: blue;
+        flex-basis: 300px
+      }
+      .three {
+        background: green;
+        flex-basis: 400px
+      }
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box grow basis one"></div>
+        <div class="box grow basis two"></div>
+        <div class="box grow basis three"></div>
+      </div>
+    </div>
+
+    <code>
+      .box {flex: 1 0 300px} <br>
+      Note: {flex: grow shrink basis}
+    </code>
+    <pre>
+
+      .box {
+        height: 100px;
+        flex: 1 0 300px
+      }
+      .one {
+        background: red;
+      }
+      .two {
+        background: blue;
+      }
+      .three {
+        background: green;
+      }
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box flex one"></div>
+        <div class="box flex two"></div>
+        <div class="box flex three"></div>
+      </div>
+    </div>
+
+    <code>
+      .box {flex: 1} <br>
+      Is equal to: <br>
+      {flex: 1 1 0}
+    </code>
+    <pre>
+
+      .box {
+        height: 100px;
+        flex: 1
+      }
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box flex1 one"></div>
+        <div class="box flex1 two"></div>
+        <div class="box flex1 three"></div>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>

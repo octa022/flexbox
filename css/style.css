@@ -21,6 +21,10 @@ pre {
   white-space: pre-wrap;
 }
 
+.wrapper {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
 .box {
   position: relative;
 }
@@ -46,8 +50,20 @@ pre {
   content: 'Three'
 }
 
+span[color] {
+  color: white;
+}
+span[color="red"]{
+  background-color: red;
+}
+span[color="blue"]{
+  background-color: blue;
+}span[color="green"]{
+  background-color: green;
+}
+
 @media screen and (max-width: 600px) {
   section {
-    padding: 0
+    padding: 0 10px
   }
 }

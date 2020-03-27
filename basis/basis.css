@@ -1,0 +1,54 @@
+.wrapper{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px dashed grey;
+}
+
+/* Flex Basis */
+
+.flex-container {
+  display: flex;
+  background: #fff;
+  flex-wrap: wrap;
+}
+.box {
+  height: 100px;
+  min-width: 300px;
+}
+.one {
+  background: red;
+}
+.two {
+  background: blue;
+}
+.three {
+  background: green;
+}
+.box.basis {
+  min-width: inherit;
+  flex-basis: 300px;
+}
+.box.grow.basis {
+  flex-basis: inherit;
+  flex-grow: 1
+}
+.box.grow.basis.one {
+  flex-basis: 200px
+}
+.box.grow.basis.two {
+  flex-basis: 300px
+}
+.box.grow.basis.three {
+  flex-basis: 400px
+}
+.box.flex {
+  min-width: inherit;
+  flex-basis: inherit;
+  flex: 1 0 300px;
+}
+.box.flex1{
+  min-width: inherit;
+  flex-basis: inherit;
+  flex: 1
+}

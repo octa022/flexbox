@@ -1,0 +1,53 @@
+html, body {
+  width: 100%;
+  /*min-height: 100%;*/
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+}
+section {
+  padding: 0 2rem;
+  width: 100%
+}
+pre {
+  box-shadow: 1px 1px 10px grey;
+  white-space: pre-wrap;
+}
+
+.box {
+  position: relative;
+}
+.box:hover {
+  opacity: 0.8
+}
+.box::before {
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center
+}
+.one::before {
+  content: 'One'
+}
+.two::before {
+  content: 'Two'
+}
+.three::before {
+  content: 'Three'
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    padding: 0
+  }
+}

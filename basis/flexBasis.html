@@ -180,6 +180,39 @@
       </div>
     </div>
 
+    <code>
+      Breakpoints .box
+    </code>
+    <pre>
+      .box {
+        --width-media: calc(100% / 3);
+        width: 100%;
+        flex-basis: var(--width-media);
+        min-width: var(--width-media);
+      }
+      @breakpoints {
+        900px {
+          .box: {
+            --width-media: calc(100% / 2);
+          }
+        }
+        600px {
+          .box: {
+            --width-media: calc(100% / 1);
+          }
+        }
+      }
+
+    </pre>
+
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box media one"></div>
+        <div class="box media two"></div>
+        <div class="box media three"></div>
+      </div>
+    </div>
+
   </section>
 </body>
 </html>

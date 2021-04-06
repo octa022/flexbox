@@ -52,3 +52,23 @@
   flex-basis: inherit;
   flex: 1
 }
+
+.box.media {
+  --width-media: calc(100% / 3);
+  width: 100%;
+  /* flex-grow: 1; */
+  flex-basis: var(--width-media);
+  min-width: var(--width-media);
+}
+
+@media (max-width: 900px) {
+  .box.media {
+    --width-media: calc(100% / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .box.media {
+    --width-media: calc(100% / 1);
+  }
+}

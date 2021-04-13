@@ -150,3 +150,15 @@ details .wrapper::before {
 .grid-2 .box.three{
   --width: 400
 }
+
+.grid-3 .box {
+  --width: 300;
+  background-color: transparent;
+  border: 0;
+  height: auto;
+}
+
+.grid-3 .box::after, .grid-3 .box::before {
+  content: '';
+  display: none;
+}
